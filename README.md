@@ -96,7 +96,7 @@ To find elements on page:
 
 where .. is the suffix of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId
 
-getByRole
+```getByRole```
 ```typescript
 const sectionHeading = screen.getByRole("heading", {
   name: "Section 1",
