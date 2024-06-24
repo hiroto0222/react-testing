@@ -24,7 +24,7 @@ RTL Philsophy
 - Instead we are testing how the component behaves when a user interacts with it
 - RTL strikes a balance between unit and E2E tests
 
-## Writing Tests
+## Writing a Basic Test
 A simple unit test for a Greet component
 
 ```typescript
