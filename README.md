@@ -44,6 +44,16 @@ test("Greet renders correctly", () => {
 - test.only() or fit()
 - test.skip() or xit()
 
+Jest Matchers and Jest DOM
+```typescript
+expect(textElement).toBeInTheDocument(); // assertion with a matcher
+```
+- Jest Matchers
+>https://jestjs.io/ja/docs/using-matchers
+- Jest DOM
+  - imported in setupTest.ts
+>https://github.com/testing-library/jest-dom
+
 ## Code Coverage
 - Statement coverage: how many of statements have been executed
 - Branches coverage: how many of the branches of the control structure have been executed
