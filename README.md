@@ -1,6 +1,6 @@
 # React Testing Basics
 
-## 1. Introduction
+## Introduction
 ### Jest and React Testing Library
 - Jest is a Javascript testing framework
 - RTL is a Javascript testing utility that provides a virtual DOM for testing React components
@@ -24,3 +24,19 @@ RTL Philsophy
 - Instead we are testing how the component behaves when a user interacts with it
 - RTL strikes a balance between unit and E2E tests
 
+## Writing Tests
+A simple unit test for a Greet component
+
+```typescript
+// Greet.tsx
+export const Greet = () => {
+  return <div>Hello</div>;
+};
+
+// Greet.test.tsx
+test("Greet renders correctly", () => {
+  render(<Greet />); // virtual dom from RTL
+  const textElement = screen.getByText(/hello/i); // grab element from virtual DOM
+  expect(textElement).toBeInTheDocument(); // expected assertions using Jest
+});
+```
