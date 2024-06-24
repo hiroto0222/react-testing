@@ -3,5 +3,5 @@ type Props = {
 };
 
 export const Greet = (props: Props) => {
-  return <div>Hello {props.name}</div>;
+  return <div>Hello {props.name ? props.name : "Guest"}</div>;
 };

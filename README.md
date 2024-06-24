@@ -43,3 +43,18 @@ test("Greet renders correctly", () => {
 - test() or it()
 - test.only() or fit()
 - test.skip() or xit()
+
+## Code Coverage
+- Statement coverage: how many of statements have been executed
+- Branches coverage: how many of the branches of the control structure have been executed
+- Function coverage: how many of the functions defined have been called
+- Line coverage: how many of lines of source code have been tested
+
+```json
+...
+"scripts": {
+  ...
+  "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
+},
+...
+```
