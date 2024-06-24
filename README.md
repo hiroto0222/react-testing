@@ -40,3 +40,6 @@ test("Greet renders correctly", () => {
   expect(textElement).toBeInTheDocument(); // expected assertions using Jest
 });
 ```
+- test() or it()
+- test.only() or fit()
+- test.skip() or xit()
