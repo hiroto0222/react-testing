@@ -68,3 +68,16 @@ expect(textElement).toBeInTheDocument(); // assertion with a matcher
 },
 ...
 ```
+
+## React Testing
+### What to Test?
+Basic overview:
+- Test component renders
+- Test component renders with props
+- Test component renders in different states
+- Test component reacts to events
+
+What not to test:
+- Implementation details (test behavior, not how)
+- Third party code
+- Code that is not important from a user POV
