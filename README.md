@@ -81,3 +81,27 @@ What not to test:
 - Implementation details (test behavior, not how)
 - Third party code
 - Code that is not important from a user POV
+
+### RTL Queries
+Every test we write generally involves the following:
+1. Render the component (rendering method from RTL)
+2. Find an element rendered by the component (RTL Queries)
+3. Assert against the element found in 2. which will pass or fail the test (expect passing with matcher function from Jest or Jest-DOM)
+
+To find elements on page:
+- getBy.. (getAllBy..)
+  - return the matching node for a query, and throw a descriptive error if no elements match or if more than one match is found.
+- queryBy.. (queryAllBy..)
+- findBy.. (findAllBy..)
+
+where .. is the suffix of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId
+
+getByRole
+```typescript
+const sectionHeading = screen.getByRole("heading", {
+  name: "Section 1",
+  level: 2,
+});
+expect(sectionHeading).toBeInTheDocument();
+```
+- Many semantic elements in HTML have a role (button, checkbox, etc.)
