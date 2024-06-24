@@ -24,7 +24,7 @@ RTL Philsophy
 - Instead we are testing how the component behaves when a user interacts with it
 - RTL strikes a balance between unit and E2E tests
 
-## Writing a Basic Test
+### Writing a Basic Test
 A simple unit test for a Greet component
 
 ```typescript
@@ -54,7 +54,7 @@ expect(textElement).toBeInTheDocument(); // assertion with a matcher
   - imported in setupTest.ts
 >https://github.com/testing-library/jest-dom
 
-## Code Coverage
+### Code Coverage
 - Statement coverage: how many of statements have been executed
 - Branches coverage: how many of the branches of the control structure have been executed
 - Function coverage: how many of the functions defined have been called
