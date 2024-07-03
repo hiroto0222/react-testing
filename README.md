@@ -135,8 +135,8 @@ expect(paragraphEle).toBeInTheDocument();
 
 ```ByDisplayValue```
 https://testing-library.com/docs/queries/bydisplayvalue
-```typescript
-const paragraphEle = screen.getByText("All fields are mandatory");
-expect(paragraphEle).toBeInTheDocument();
-```
 - Returns the input, textarea, or select element that has the matching display value
+
+```ByAltText```
+https://testing-library.com/docs/queries/byalttext
+
