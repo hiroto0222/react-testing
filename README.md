@@ -191,3 +191,17 @@ it("doesnt render learning button when not logged in", () => {
   expect(startLearningButton).not.toBeInTheDocument();
 });
 ```
+
+### FindBy
+- What if elements are not present in the DOM to begin with, but after some time. ie: fetched data.
+- Returns a promise which resolves when an element is found which matches the given query. Default timeout of 1000ms.
+```typescript
+it("eventually renders start learning button", async () => {
+  render(<Skills skills={skills} />);
+
+  const startLearningButton = await screen.findByRole("button", {
+    name: "Start Learning",
+  });
+  expect(startLearningButton).toBeInTheDocument();
+});
+```
