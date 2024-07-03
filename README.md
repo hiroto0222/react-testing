@@ -205,3 +205,12 @@ it("eventually renders start learning button", async () => {
   expect(startLearningButton).toBeInTheDocument();
 });
 ```
+
+### Testing Playground
+https://testing-playground.com/
+
+
+## User Interactions
+- user-event library
+  - Companion library for Testing Library
+  - Alternative is fireEvent. However, user-event simulates full interactions, which may fire additional checks along the way.
