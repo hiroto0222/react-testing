@@ -140,3 +140,5 @@ https://testing-library.com/docs/queries/bydisplayvalue
 ```ByAltText```
 https://testing-library.com/docs/queries/byalttext
 
+```ByTitle```
+https://testing-library.com/docs/queries/bytitle
