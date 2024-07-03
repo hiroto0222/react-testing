@@ -145,3 +145,36 @@ https://testing-library.com/docs/queries/bytitle
 
 ```ByTestId```
 https://testing-library.com/docs/queries/bytestid
+
+### Priority Order for Queries
+"Your test should resemble how users interact with your code as much as possible"
+1. getByRole
+2. getByLabelText
+3. getByPlaceHolderText
+4. getByText
+5. getByDisplayValue
+6. getByAltText
+7. getByTitle
+8. getByTestId
+
+### Query Multiple Elements
+```getAllByRole```
+```typescript
+describe("Skills", () => {
+  const skills = ["HTML", "CSS", "JavaScript"];
+
+  it("renders correctly", () => {
+    render(<Skills skills={skills} />);
+
+    const listElement = screen.getByRole("list");
+    expect(listElement).toBeInTheDocument();
+  });
+
+  it("renders a list of skills", () => {
+    render(<Skills skills={skills} />);
+
+    const listItemElements = screen.getAllByRole("listitem");
+    expect(listItemElements).toHaveLength(skills.length);
+  });
+});
+```
