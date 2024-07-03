@@ -142,3 +142,6 @@ https://testing-library.com/docs/queries/byalttext
 
 ```ByTitle```
 https://testing-library.com/docs/queries/bytitle
+
+```ByTestId```
+https://testing-library.com/docs/queries/bytestid
