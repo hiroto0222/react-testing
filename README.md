@@ -83,7 +83,7 @@ What not to test:
 - Third party code
 - Code that is not important from a user POV
 
-### RTL Queries
+## RTL Queries
 Every test we write generally involves the following:
 1. Render the component (rendering method from RTL)
 2. Find an element rendered by the component (RTL Queries)
@@ -176,5 +176,18 @@ describe("Skills", () => {
     const listItemElements = screen.getAllByRole("listitem");
     expect(listItemElements).toHaveLength(skills.length);
   });
+});
+```
+### QueryBy
+- Returns the matching node for a query, and return null if no elements match
+- Useful for asserting an element that is not present
+```typescript
+it("doesnt render learning button when not logged in", () => {
+  render(<Skills skills={skills} />);
+
+  const startLearningButton = screen.queryByRole("button", {
+    name: "Start Learning",
+  });
+  expect(startLearningButton).not.toBeInTheDocument();
 });
 ```
