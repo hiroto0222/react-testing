@@ -340,3 +340,8 @@ describe("CounterTwo", () => {
   });
 });
 ```
+
+### Mocking HTTP Requests
+- Mock Service Worker (MSW)
+  - intercepts actual api requests
+
