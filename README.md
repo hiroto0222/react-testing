@@ -214,3 +214,18 @@ https://testing-playground.com/
 - user-event library
   - Companion library for Testing Library
   - Alternative is fireEvent. However, user-event simulates full interactions, which may fire additional checks along the way.
+
+```typescript
+it("renders a count of 1 after clicking the increment button once", async () => {
+  user.setup();
+  render(<Counter />);
+
+  const incrementButton = screen.getByRole("button", {
+    name: "Increment",
+  });
+  await user.click(incrementButton);
+
+  const countEle = screen.getByRole("heading");
+  expect(countEle).toHaveTextContent("1");
+});
+```
