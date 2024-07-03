@@ -132,3 +132,11 @@ const paragraphEle = screen.getByText("All fields are mandatory");
 expect(paragraphEle).toBeInTheDocument();
 ```
 - Search for elements that have a text node with textContent matching the given text
+
+```ByDisplayValue```
+https://testing-library.com/docs/queries/bydisplayvalue
+```typescript
+const paragraphEle = screen.getByText("All fields are mandatory");
+expect(paragraphEle).toBeInTheDocument();
+```
+- Returns the input, textarea, or select element that has the matching display value
