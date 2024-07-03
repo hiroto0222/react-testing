@@ -117,3 +117,10 @@ const nameEle2 = screen.getByLabelText("Name", {
 });
 expect(nameEle2).toBeInTheDocument();
 ```
+
+```ByPlaceholderText```
+https://testing-library.com/docs/queries/byplaceholdertext
+```typescript
+const nameEle3 = screen.getByPlaceholderText("Fullname");
+expect(nameEle3).toBeInTheDocument();
+```
