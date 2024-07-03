@@ -124,3 +124,11 @@ https://testing-library.com/docs/queries/byplaceholdertext
 const nameEle3 = screen.getByPlaceholderText("Fullname");
 expect(nameEle3).toBeInTheDocument();
 ```
+
+```ByText```
+https://testing-library.com/docs/queries/bytext
+```typescript
+const paragraphEle = screen.getByText("All fields are mandatory");
+expect(paragraphEle).toBeInTheDocument();
+```
+- Search for elements that have a text node with textContent matching the given text
