@@ -96,7 +96,8 @@ To find elements on page:
 
 where .. is the suffix of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and TestId
 
-```getByRole```
+```ByRole```
+https://testing-library.com/docs/queries/byrole/
 ```typescript
 const sectionHeading = screen.getByRole("heading", {
   name: "Section 1",
@@ -105,3 +106,13 @@ const sectionHeading = screen.getByRole("heading", {
 expect(sectionHeading).toBeInTheDocument();
 ```
 - Many semantic elements in HTML have a role (button, checkbox, etc.)
+- Should be top preference for query
+
+```ByLabelText```
+https://testing-library.com/docs/queries/bylabeltext
+```typescript
+const nameEle2 = screen.getByLabelText("Name", {
+  selector: "input",
+});
+expect(nameEle2).toBeInTheDocument();
+```
