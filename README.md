@@ -245,3 +245,19 @@ it("renders a count of 10 after typing 10 in amount input and clicking the set b
   expect(countEle).toHaveTextContent("10");
 });
 ```
+
+## Providers
+```typescript
+describe("MuiMode", () => {
+  it("renders text correctly", () => {
+    render(<MuiMode />, {
+      wrapper: AppProviders,
+    });
+    const headingElement = screen.getByRole("heading");
+    expect(headingElement).toHaveTextContent("dark mode");
+  });
+});
+```
+
+## Custom Render Functions
+Wrapper across all tests. Write a custom render function.
