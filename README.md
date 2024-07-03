@@ -274,3 +274,22 @@ const customRender = (
 export * from "@testing-library/react";
 export { customRender as render };
 ```
+
+## Custom Hooks
+```typescript
+describe("useCounter", () => {
+  it("renders the initial count 0", () => {
+    const { result } = renderHook(useCounter);
+    expect(result.current.count).toBe(0);
+  });
+
+  it("accepts and renders the same initial count 10", () => {
+    const { result } = renderHook(useCounter, {
+      initialProps: {
+        initialCount: 10,
+      },
+    });
+    expect(result.current.count).toBe(10);
+  });
+});
+```
